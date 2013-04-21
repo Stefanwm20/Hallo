@@ -1,0 +1,62 @@
+/**
+* Praktikum TIPR1 (Prof. Jenke), SS 2013
+* Gruppe Wagner,Stefan Sylvius(2103833, stefansylvius.wagner@haw-hamburg.de), 
+* Wendt(<Matrikelnummer 2>, lukas.wendt@haw-hamburg.de) 
+* ...
+* Aufgabe: Aufgabenblatt 1, Aufgabe 1
+* Verwendete Quellen: /
+*/
+
+
+------------------------------------------------------------------------------
+
+Aufgabenstellung
+Schreiben Sie ein Programm Faculty das die Fakultät einer Zahl inputNumber berechnetunddieseausgibt.
+Die Zahl inputNumber soll vom Benutzer eingegeben werden können.
+------------------------------------------------------------------------------
+
+Anforderungsanalyse
+
+	Eingabe:  inputNumber >=1
+
+	Ausgabe:  Fakultät von inputNumber
+
+       Beispiel:  5! = 1 * 2 * 3 * 4 * 5 = 120
+
+------------------------------------------------------------------------------
+
+Entwurf
+
+benötigte Variablen (Speicherplätze):	
+
+Eingabe: inputNumber
+    	
+sum: Summe der ausgerechneten Zahlen
+	
+i: Zähler für die for-Schleife
+
+
+------------------------------------------------------------------------------
+
+Vorgehen/Algorythmus
+
+1) Es wird eine for-Schleife initialisiert die bis zu inputNumber geht. 
+Also die Fakultät, die ausgerechnet werden soll.
+
+2)Dann wird der durch die Schleife durchlaufene Wert(i) mit dem 
+vorherigen multipliziert und immer wieder der Variable sum zugewiesen.
+
+3)Anschließend wird (sum) das Ergebnis ausgegeben.
+
+
+
+
+------------------------------------------------------------------------------
+Test
+
+ 5! =  120
+10! =  3628800
+20! = -2102132736
+
+
+

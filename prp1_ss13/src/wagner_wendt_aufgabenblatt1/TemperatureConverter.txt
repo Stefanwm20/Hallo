@@ -1,0 +1,72 @@
+/**
+* Praktikum TIPR1 (Prof. Jenke), SS 2013
+* Gruppe Wagner,Stefan Sylvius(2103833, stefansylvius.wagner@haw-hamburg.de), 
+* Wendt(<Matrikelnummer 2>, lukas.wendt@haw-hamburg.de) 
+* ...
+* Aufgabe: Aufgabenblatt 1, Aufgabe 1
+* Verwendete Quellen: /
+*/
+
+
+------------------------------------------------------------------------------
+
+Aufgabenstellung
+
+Schreiben Sie ein Programm TemperatureConverter, das Temperaturen von der Einheit
+Celsius in die Einheit Fahrenheit umrechnet.
+------------------------------------------------------------------------------
+
+Anforderungsanalyse
+
+	Eingabe: Keine
+
+	Ausgabe:  Tabelle mit und gerundeteten Fahrenheit Temperaturen von 0C° bis 100C°
+
+	Beispiel: 
+
+Temperatur-Umrechnungstabelle
+=============================
+C F
+------
+0 32
+2 36
+4 39
+6 43 
+
+------------------------------------------------------------------------------
+
+Entwurf
+
+benötigte Variablen (Speicherplätze):	
+
+String(title,header,separator1,separator2)  =  Bestandteil der Überschrift.
+
+currentTempCelsius  =  Temperatur in Celsius.
+
+tempFahrenheit	=  Temperatur in Fahrenheit.
+
+roundedValue  =  Die gerundete Temperatur in Fahrenheit.
+
+
+------------------------------------------------------------------------------
+
+Vorgehen/Algorythmus
+
+
+1) Eine for-Schleife erzeugen mit dem Wert currentTempCelsius =0 und currentTempCelsius+=2 
+bei jedem Durchgang bis 100 erhöhen:
+
+2)Der Wert von tempFahrenheit wird ausgerechnet.
+
+3)Zu dem Wert wird nun 0.5 addiert und anschließend gecastet, so dass der Nachkommateil abgeschnitten wird.
+
+
+4)Anschließend werden currentTempCelsius und roundedValue ausgegeben.
+------------------------------------------------------------------------------
+Test
+
+ 0°C   = 32°F	 
+ 52°C  = 126°F 
+ 100°C = 212°F 
+
+

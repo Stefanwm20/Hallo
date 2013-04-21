@@ -1,0 +1,78 @@
+/**
+* Praktikum TIPR1 (Prof. Jenke), SS 2013
+* Gruppe Wagner,Stefan Sylvius(2103833, stefansylvius.wagner@haw-hamburg.de), 
+* Wendt(<Matrikelnummer 2>, lukas.wendt@haw-hamburg.de) 
+* ...
+* Aufgabe: Aufgabenblatt 1, Aufgabe 3
+* Verwendete Quellen: /
+*/
+
+
+------------------------------------------------------------------------------
+
+Aufgabenstellung
+
+Schreiben Sie ein Programm FibonacciNumbers,dass vom Anwender die Zahl inputNumber abfragt,die zugehörige Fibonacci Zahl berechnet und diese ausgibt.
+Die Anwender-Eingabe soll in einer Variablen mit Namen inputNumber vom geeigneten Typ abgelegt werden.
+
+------------------------------------------------------------------------------
+
+Anforderungsanalyse
+
+	Eingabe:  inputNumber
+
+	Ausgabe:  fn = Fibonacci Zahl an n-ter Stelle
+
+	Beispiel  Fibonacci Zahl 4 = 3
+
+------------------------------------------------------------------------------
+
+Entwurf
+
+benötigte Variablen (Speicherplätze):	
+
+Eingabe: inputNumber
+
+i: Zähler für die while-Schleife
+
+f0= Erste Fibonnaci Nummer(n-2)
+
+f1= Zweite Fibonacci Nummer(n-1)
+
+f2= Zwischenspeicher und Ergebnis (n)
+
+
+------------------------------------------------------------------------------
+
+Vorgehen/Algorythmus
+
+1) while-Schleife wird initialisiert.
+
+2) Werte für Term f2=f0+f1 werden eingesetzt.
+
+3) f1 wird zu f0 zugewiesen und f2 also das Ergebniss wird zu f1 zugewiesen
+
+4) Dies durchlaüft nun die Schleife also:
+Durchlauf 1: 
+f2      =      0+1      =    (f0+f1)  =  1
+f0 	= 	1	=	f1
+f1	=	1	=	f2
+Durchlauf 2:
+f2      =      1+1      =    (f0+f1)  =  2
+f0 	= 	1	=	f1
+f1	=	2	=	f2
+
+Durchlauf 3:
+f2      =      1+2      =    (f0+f1)  =  3
+f0 	= 	2	=	f1
+f1	=	3	=	f2
+...
+
+------------------------------------------------------------------------------
+Test
+
+f10= 
+<< 52°C  = 126°F >>
+<< 100°C = 212°F >>
+
+
