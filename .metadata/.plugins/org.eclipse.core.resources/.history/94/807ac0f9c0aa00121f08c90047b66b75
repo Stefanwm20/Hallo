@@ -49,18 +49,18 @@ public class QubicNewton {
 
 	void computeCrossPoint() {
 
-		double cross = 10;
+		double cross = 0;
 		int i = 0;
 		do {
 
 			double f = f(startValue);
 			double fAbl = fPrime(startValue);
 
+			cross = startValue - (f / fAbl);
+			startValue = cross;
+			i++;
 			if (Math.abs(cross) > EPSILON) {
-				cross = startValue - (f / fAbl);
-				startValue = cross;
-				i++;
-
+				System.out.println(cross);
 			}
 		} while (Math.abs(cross) > EPSILON && i < 1002);
 

@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * Praktikum TIPR1 (Prof. Jenke), SS 2013 Gruppe Wagner,Stefan Sylvius(2103833,
  * stefansylvius.wagner@haw-hamburg.de), Wendt(<Matrikelnummer 2>,
- * lukas.wendt@haw-hamburg.de) ... Aufgabe: Aufgabenblatt 3, Aufgabe 1
+ * lukas.wendt@haw-hamburg.de) ... Aufgabe: Aufgabenblatt 1, Aufgabe 1
  * Verwendete Quellen: /
  */
 public class QubicNewton {
@@ -49,29 +49,26 @@ public class QubicNewton {
 
 	void computeCrossPoint() {
 
-		double cross = 10;
+		double cross = 5;
 		int i = 0;
-		do {
+		while (Math.abs(cross) > EPSILON && i < 1002) {
 
+			
 			double f = f(startValue);
 			double fAbl = fPrime(startValue);
+			cross = startValue - (f / fAbl);
+			startValue = cross;
+			i++;
 
-			if (Math.abs(cross) > EPSILON) {
-				cross = startValue - (f / fAbl);
-				startValue = cross;
-				i++;
+		}
 
-			}
-		} while (Math.abs(cross) > EPSILON && i < 1002);
-
-		if (i > 100 && cross != 0) {
-			// System.out.println(i);
-			System.out.printf("%3.3f", cross);
-		} else if (i > 1000 || cross == 0) {
+		if (i > 1000 && cross == 0) {
 			System.out.println("Es konvergiert nicht.");
-		} else if (Double.isNaN(cross)) {
-			System.out.println(cross);
+		} else if (fPrime(startValue) == 0) {
 			System.out.println("Ableitung ist gleich 0");
+		} else if (i > 1000) {
+			// System.out.println(i);
+			System.out.printf("%3.3f",cross);
 		}
 
 	}
