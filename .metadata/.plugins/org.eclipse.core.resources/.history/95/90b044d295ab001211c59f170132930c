@@ -1,0 +1,88 @@
+package wagner_wendt__aufgabenblatt3;
+
+public class Tamagotchi {
+	private int hunger;
+	private int boredness;
+	private int tiredness;
+
+	public int getHunger() {
+		// TODO Auto-generated method stub
+		return hunger;
+	}
+
+	public int getTiredness() {
+		// TODO Auto-generated method stub
+		return tiredness;
+	}
+
+	public int getBoredness() {
+		// TODO Auto-generated method stub
+		return boredness;
+	}
+
+	public void setHunger(int i) {
+		hunger = i;
+
+	}
+
+	public void setTiredness(int i) {
+		tiredness = i;
+
+	}
+
+	public void setBoredness(int i) {
+		boredness = i;
+
+	}
+
+	public void timePasses() {
+		hunger++;
+		tiredness++;
+		boredness++;
+
+	}
+
+	public void eat() {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void sleep() {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void play() {
+		// TODO Auto-generated method stub
+
+	}
+
+	public int getScore() {
+		int score = 0;
+		if (getHunger() >= 4) {
+
+			score -= 2;
+
+		}  if (getTiredness() >= 4) {
+
+			score -= 2;
+
+		} if (getBoredness() >= 4) {
+
+			score -= 2;
+
+		}  if (getHunger() < 4) {
+
+			score += 1;
+		}  if (getTiredness() < 4) {
+
+			score += 1;
+		}  if (getBoredness() < 4) {
+
+			score += 1;
+		}
+		return score;
+
+	}
+
+}

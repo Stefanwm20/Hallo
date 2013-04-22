@@ -60,14 +60,14 @@ public class QubicNewton {
 				cross = startValue - (f / fAbl);
 				startValue = cross;
 				i++;
-System.out.println( i);
+
 			}
-		} while (Math.abs(cross) > EPSILON );
+		} while (Math.abs(cross) > EPSILON && i < 1002);
 
 		if (i > 100 && cross != 0) {
 			// System.out.println(i);
 			System.out.printf("%3.3f", cross);
-		} else if (i > 1000 ) {
+		} else if (i >1000 || cross == 0  ) {
 			System.out.println("Es konvergiert nicht.");
 		} else if (Double.isNaN(cross)) {
 			System.out.println(cross);

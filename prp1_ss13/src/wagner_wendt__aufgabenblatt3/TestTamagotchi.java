@@ -3,7 +3,7 @@
  * Hochschule für Angewandte Wissenschaften (HAW), Hamburg
  * Lecture demo program.
  */
-package edu.tipr1.exercises.exercise3;
+package wagner_wendt__aufgabenblatt3;
 
 /**
  * This is a testing class for the class Tamagotchi.
@@ -80,10 +80,10 @@ public class TestTamagotchi {
 	 */
 	private boolean testGetScore() {
 		Tamagotchi tamagotchi = new Tamagotchi();
-		tamagotchi.setHunger(1);
-		tamagotchi.setTiredness(2);
-		tamagotchi.setBoredness(3);
-		boolean test1Result = tamagotchi.getScore() == 3;
+		tamagotchi.setHunger(4);
+		tamagotchi.setTiredness(4);
+		tamagotchi.setBoredness(4);
+		boolean test1Result = tamagotchi.getScore() == -6;
 
 		tamagotchi.setHunger(4);
 		tamagotchi.setTiredness(5);
@@ -105,7 +105,7 @@ public class TestTamagotchi {
 
 		boolean allTestsPassed = true;
 		TestTamagotchi testTamagotchi = new TestTamagotchi();
-
+		System.out.println(testTamagotchi.testGetScore());
 		// timePasses()
 		if (!testTamagotchi.testTimePasses()) {
 			System.out.println("Testing timePassed(): failed");
